@@ -4,7 +4,7 @@
 void func(int key){
 	char overflowme[32];
 	printf("overflow me : ");
-	gets(overflowme);	// smash me!
+	fgets(overflowme, sizeof(overflowme), stdin);	// smash me!
 	if(key == 0xcafebabe){
 		system("/bin/sh");
 	}
